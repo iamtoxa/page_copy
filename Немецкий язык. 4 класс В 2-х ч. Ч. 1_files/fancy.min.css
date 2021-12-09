@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('./static/landing/fonts/latomedium.woff2') format('woff2'), url('./static/landing/fonts/latomedium.woff') format('woff'), url('./static/landing/fonts/latomedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./static//landing/fonts/latobold.woff2') format('woff2'), url('./static/landing/fonts/latobold.woff') format('woff'), url('./static/landing/fonts/latobold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./static//landing/fonts/latoblack.woff2') format('woff2'), url('./static/landing/fonts/latoblack.woff') format('woff'), url('./static/landing/fonts/latoblack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@keyframes swing {
+
+0
+{
+    transform: rotate(0)
+}
+10
+%
+{
+    transform: rotate(0)
+}
+90
+%
+{
+    transform: rotate(720deg)
+}
+100
+%
+{
+    transform: rotate(720deg)
+}
+}
+@-webkit-keyframes swing {
+
+0
+{
+    -webkit-transform: rotate(0)
+}
+10
+%
+{
+    -webkit-transform: rotate(0)
+}
+90
+%
+{
+    -webkit-transform: rotate(720deg)
+}
+100
+%
+{
+    -webkit-transform: rotate(720deg)
+}
+}
+
+@media print {
+    #page-container {
+        display: none;
+    }
+}
+
+@media screen {
+    #sidebar {
+        background-color: white;
+        -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+    }
+
+    #outline {
+        font-family: Lato, serif;
+        font-size: 13px;
+        margin: 2em 1em
+    }
+
+    #outline ul {
+        padding: 0
+    }
+
+    #outline li {
+        list-style-type: none;
+        margin: 1em 0
+    }
+
+    #outline li > ul {
+        margin-left: 1em
+    }
+
+    #outline a, #outline a:visited, #outline a:hover, #outline a:active {
+        line-height: 1.2;
+        color: #333;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-decoration: none;
+        display: block;
+        overflow: hidden;
+        outline: 0
+    }
+
+    #outline a:hover {
+        color: black;
+    }
+
+    #page-container {
+        background-color: #eceff1;
+        -webkit-transition: left 500ms;
+        transition: left 500ms
+    }
+
+    .pf {
+        margin: 13px auto;
+        border-collapse: separate;
+        border-radius: 8px;
+        -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+    }
+
+    .pc.opened {
+        -webkit-animation: fadein 100ms;
+        animation: fadein 100ms
+    }
+
+    .loading-indicator.active {
+        -webkit-animation: swing 1.5s ease-in-out .01s infinite alternate none;
+        animation: swing 1.5s ease-in-out .01s infinite alternate none
+    }
+}
